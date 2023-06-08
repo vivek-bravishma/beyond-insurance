@@ -1,6 +1,6 @@
 import { HashRouter as Router } from "react-router-dom";
-import Routing from "./routes";
-// import Routing from "./routes/index1";
+// import Routing from "./routes";
+import Routing from "./routes/index1";
 
 import "./assets/css/animate.min.css";
 import "./assets/css/bootstrap.min.css";
