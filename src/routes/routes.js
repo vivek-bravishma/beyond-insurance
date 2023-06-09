@@ -116,7 +116,8 @@ const routes = [
     path: "/dashboard",
     element: (
       <>
-        <PrivateRoute component={<DashBoard />} />
+        <PrivateRoute component={<Home3 />} />
+        {/* <PrivateRoute component={<DashBoard />} /> */}
       </>
     ),
   },

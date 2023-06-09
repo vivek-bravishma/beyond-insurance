@@ -6441,3 +6441,12 @@ input[type="date"]::-ms-input-placeholder {
   margin-left: 0px;
   margin: 0 20px ;
 }
+
+.dashboardImage{
+  width: 100vw;
+}
+
+.dashboardImage img{
+  width: 100%;
+  object-fit: cover;
+}

@@ -806,7 +806,7 @@ const Main = () => {
 
   return (
     <>
-      <div>
+      <div className="dashboardImage">
         <img src="assets/images/resources/hdfc.jpg" />
       </div>
     </>
