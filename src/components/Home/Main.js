@@ -12,8 +12,7 @@ import React, { useState, useEffect } from "react";
 import secureLocalStorage from "react-secure-storage";
 import { chat } from "../Chat/chat";
 import Products from "../Products";
-
-
+import About from "../About";
 
 const Main = () => {
   const user = JSON.parse(secureLocalStorage.getItem("user"));
@@ -66,14 +65,15 @@ const Main = () => {
       <section className="main-slider">
         <Swiper
           className="swiper-container thm-swiper__slider"
-          modules={[Navigation, Autoplay]}
+          modules={[Navigation]}
+          // modules={[Navigation, Autoplay]}
           slidesPerView={1}
           loop={true}
           navigation={{
             nextEl: "#main-slider__swiper-button-next",
             prevEl: "#main-slider__swiper-button-prev",
           }}
-          autoplay={{ delay: 5000 }}
+          // autoplay={{ delay: 5000 }}
         >
           <div className="swiper-wrapper">
             <SwiperSlide>
@@ -85,12 +85,12 @@ const Main = () => {
                   }}
                 ></div>
                 <div className="container">
-                  <div className="row">
+                  <div className="row home-title">
                     <div className="col-xl-6 col-lg-6">
-                      <p>Simple & Secure Payment Process</p>
-                      <h2>Connecting All Your Loan Needs</h2>
+                      <p>Expert Insurance Solutions</p>
+                      <h2>Your Shield Against Uncertainty</h2>
                       <Link to="#" className=" thm-btn">
-                        Apply For Loan
+                        Know more
                       </Link>
                     </div>
                   </div>
@@ -106,10 +106,10 @@ const Main = () => {
                   }}
                 ></div>
                 <div className="container">
-                  <div className="row">
+                  <div className="row home-title">
                     <div className="col-xl-6 col-lg-6">
-                      <p>Simple & Secure Payment Process</p>
-                      <h2>Connecting All Your Loan Needs</h2>
+                      <p>Insurance Made Easy</p>
+                      <h2>Simplifying Your Coverage Needs</h2>
                       <Link to="#" className=" thm-btn">
                         Apply For Loan
                       </Link>
@@ -127,10 +127,10 @@ const Main = () => {
                   }}
                 ></div>
                 <div className="container">
-                  <div className="row">
+                  <div className="row home-title">
                     <div className="col-xl-6 col-lg-6">
-                      <p>Simple & Secure Payment Process</p>
-                      <h2>Connecting All Your Loan Needs</h2>
+                      <p>Embrace the Unexpected</p>
+                      <h2>Insurance Solutions for Every Aspect of Life</h2>
                       <Link to="#" className=" thm-btn">
                         Apply For Loan
                       </Link>
@@ -156,7 +156,7 @@ const Main = () => {
             </div>
           </div>
         </Swiper>
-        <div className="feature-two">
+        {/* <div className="feature-two">
           <div className="container">
             <div className="row">
               <div
@@ -179,11 +179,11 @@ const Main = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
 
-      <section >
-      <Products/>
+      <section>
+        <Products />
       </section>
 
       {/* <section className="about-one">
@@ -302,7 +302,7 @@ const Main = () => {
         </div>
       </section> */}
 
-      <section className="service-one">
+      {/* <section className="service-one">
         <div className="container">
           <div className="block-title text-center">
             <p>What We’re Offering</p>
@@ -321,10 +321,6 @@ const Main = () => {
                   <h3>
                     <Link to="/servicedetails">Personal Loan</Link>
                   </h3>
-                  {/* <p>
-                    There are many variations of passages of lorem ipsum
-                    available the majority have some.
-                  </p> */}
                   <p>
                     Personal loans can be a valuable financial tool for those
                     who need access to funds quickly and manageable repayment
@@ -349,10 +345,6 @@ const Main = () => {
                   <h3>
                     <Link to="/servicedetails">Education Loan</Link>
                   </h3>
-                  {/* <p>
-                    There are many variations of passages of lorem ipsum
-                    available the majority have some.
-                  </p> */}
                   <p>
                     Education loans can be a valuable tool for those who want to
                     invest in their education and secure a brighter future for
@@ -377,10 +369,6 @@ const Main = () => {
                   <h3>
                     <Link to="/servicedetails">Business Loan</Link>
                   </h3>
-                  {/* <p>
-                    There are many variations of passages of lorem ipsum
-                    available the majority have some.
-                  </p> */}
                   <p>
                     Business loans fuel business growth by providing financial
                     support for essential investments such as equipment,
@@ -395,70 +383,9 @@ const Main = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="feature-one">
-        <img
-          src="assets/images/shapes/feature-shape-1-1.png"
-          alt=""
-          className="feature-one__shape-1"
-        />
-        <img
-          src="assets/images/shapes/feature-shape-1-2.png"
-          alt=""
-          className="feature-one__shape-2"
-        />
-        <img
-          src="assets/images/shapes/feature-shape-1-3.png"
-          alt=""
-          className="feature-one__shape-3"
-        />
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="block-title text-left">
-                <p>Get to Know About</p>
-                <h2>Flexible and Quick Business Loans</h2>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              {/* <p className="block-text">
-                There are many variations of passages of available but the
-                majority have suffered alteration in some form, by injected
-                humou or randomised words which don't look even slightly
-                believable.
-              </p> */}
-              <p className="block-text">
-                Flexible and quick business loans can be an excellent option for
-                businesses that need access to funds quickly and with minimal
-                hassle. However, it's essential to research and compare
-                different loan options to find the best fit for your business's
-                specific needs and financial situation.
-              </p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-4">
-              <div className="feature-one__box">
-                <i className="pylon-icon-assets"></i>
-                <p>Very Low Rates on All Loans</p>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="feature-one__box">
-                <i className="pylon-icon-verification"></i>
-                <p>99.9% Success Rate Guarantee</p>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="feature-one__box">
-                <i className="pylon-icon-finance"></i>
-                <p>Flexible with Your Repayments</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <About />
 
       <section className="trusted-company">
         <div
@@ -481,9 +408,10 @@ const Main = () => {
                     by injected humour. Duis aute irure dolor lipsum is simply.
                   </p> */}
                   <p>
-                    With a track record of excellence and a reputation for
-                    trustworthiness, we are proud to be a trusted company that
-                    our customers can rely on for their business needs.
+                    Continuously engage with your audience, respond to
+                    inquiries, and address any concerns promptly. By
+                    consistently providing reliable and valuable insurance
+                    information.
                   </p>
                 </div>
               </div>
@@ -492,15 +420,15 @@ const Main = () => {
               <div className="trusted-company__box-wrap">
                 <div className="trusted-company__box">
                   <span>01</span>
-                  <p>Solutions for small business and big companies</p>
+                  <p>Expertise and Authoritative Voice.</p>
                 </div>
                 <div className="trusted-company__box">
                   <span>02</span>
-                  <p>Take our loans and pay for your studies</p>
+                  <p>Accuracy and Relevances</p>
                 </div>
                 <div className="trusted-company__box">
                   <span>03</span>
-                  <p>Get special loans for more needs in 2 hours</p>
+                  <p>Privacy and Securitys</p>
                 </div>
               </div>
             </div>
@@ -529,7 +457,7 @@ const Main = () => {
                   </span>
                   %
                 </h3>
-                <p>We Approve Loans</p>
+                <p>We Approve Insurance</p>
               </div>
             </div>
             <div className="col-md-6 col-lg-3">
@@ -632,8 +560,8 @@ const Main = () => {
                   <div className="testimonials-one__box">
                     <p>
                       <span>
-                        "I've been with this bank for years and their customer
-                        service is always top-notch and i like service."
+                        "I decided to go with Beyond Insurance, and it was the
+                        best decision I made. I am very happy"
                       </span>
                     </p>
                     <div className="testimonials-one__box-info">
@@ -652,8 +580,8 @@ const Main = () => {
                   <div className="testimonials-one__box">
                     <p>
                       <span>
-                        "I had an issue with my account and the bank was quick
-                        to resolve it and make things right."
+                        "I have complete peace of mind knowing that I'm
+                        protected by Beyond Insurance."
                       </span>
                     </p>
                     <div className="testimonials-one__box-info">
@@ -672,8 +600,8 @@ const Main = () => {
                   <div className="testimonials-one__box">
                     <p>
                       <span>
-                        "I appreciate and liked the personal attention I receive
-                        from the staff at my local branch."
+                        "I highly recommend Beyond Insurance for their great
+                        coverage and excellent customer support."
                       </span>
                     </p>
                     <div className="testimonials-one__box-info">
@@ -687,13 +615,12 @@ const Main = () => {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <div className="swiper-slide">
                   <div className="testimonials-one__box">
                     <p>
                       <span>
-                        "I appreciate personalized attention receive from staff
-                        at my local branch."
+                        "Beyond Insurance policy provided me with the coverage I needed, and their claims team guided me through every step of the claims process."
                       </span>
                     </p>
                     <div className="testimonials-one__box-info">
@@ -706,7 +633,7 @@ const Main = () => {
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
+              </SwiperSlide> */}
               <SwiperSlide>
                 <div className="swiper-slide">
                   <div className="testimonials-one__box">
@@ -732,8 +659,8 @@ const Main = () => {
                   <div className="testimonials-one__box">
                     <p>
                       <span>
-                        "I appreciate the low fees and competitive interest
-                        rates offered by this bank."
+                        "I appreciate the fast processing services provided by
+                        Beyond Insurance."
                       </span>
                     </p>
                     <div className="testimonials-one__box-info">
@@ -752,8 +679,8 @@ const Main = () => {
                   <div className="testimonials-one__box">
                     <p>
                       <span>
-                        "I recently took out a loan with this bank and the
-                        process was smooth and hassle-free."
+                        "I took a insurance policy and the process was smooth
+                        and hassle-free."
                       </span>
                     </p>
                     <div className="testimonials-one__box-info">
@@ -865,19 +792,19 @@ const Main = () => {
                   <div className="col-md-6">
                     <div className="why-choose__box">
                       <h3>
-                        <i className="fa fa-caret-right"></i>Quick Payments
+                        <i className="fa fa-caret-right"></i>Coverage customization
                       </h3>
                       <p>
-                        Our quick payment options processing systems are
-                        designed to provide our clients with a hassle-free
-                        payment experience.
+                        The ability to customize
+                        insurance coverage based on your specific needs is an
+                        important consideration
                       </p>
                     </div>
                   </div>
                 </div>
                 <div className="why-choose__progress">
                   <div className="why-choose__progress-top">
-                    <h3>Loan Process</h3>
+                    <h3>Claim Processing</h3>
                     <span>90%</span>
                   </div>
                   <div className="why-choose__progress-bar">
@@ -907,7 +834,7 @@ const Main = () => {
         </div>
       </section>
 
-      <section className="blog-home pt-120 pb-90">
+      {/* <section className="blog-home pt-120 pb-90">
         <div className="container">
           <div className="block-title text-center">
             <p>Directly From the Blog</p>
@@ -997,7 +924,7 @@ const Main = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <div className="client-carousel pt-120 pb-120 client-carousel__has-border-top">
         <div className="container">
@@ -1100,11 +1027,11 @@ const Main = () => {
               <span>Transparent</span>
               <span>Secure</span>
             </p>
-            <h3>Get a Business Loans Quickly</h3>
+            <h3>Explore Our Insurance Offerings</h3>
           </div>
           <div className="right-content">
             <Link to="#" className="thm-btn">
-              Apply For Loan
+              Know more
             </Link>
           </div>
         </div>

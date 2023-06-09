@@ -67,6 +67,7 @@ const Navbar = () => {
 
     //another code for logout to render in every component
     secureLocalStorage.removeItem("user");
+    localStorage.removeItem("users");
     setIsLoggedIn(false);
     navigate("/");
   };
@@ -128,13 +129,13 @@ const Navbar = () => {
               </div>
             </div>
           </div> */}
-          <div>
+          {/* <div>
             <h5 className="mb pl-5 ml-4" style={{ color: "#314C82" }}>
               {location?.pathname !== "/login" &&
                 user?.firstName &&
                 `Welcome ${user?.firstName}`}
             </h5>
-          </div>
+          </div> */}
           {/* {location?.pathname !== "/login" && location?.pathname !== "/" ? ( */}
           <nav
             className={`main-menu stricked-menu stricky-fixed ${
@@ -158,16 +159,37 @@ const Navbar = () => {
               </div>
               <ul className="main-menu__list">
                 <li className={`dropdown ${menu.about && "current"}`}>
+                  <Link to="/">Home</Link>
+                </li>
+                {user?.firstName && location?.pathname !== "/login" && (
+                  <li className={`dropdown ${menu.about && "current"}`}>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
+                )}
+                <li className={`dropdown ${menu.about && "current"}`}>
+                  <Link to="/products">Products</Link>
+                </li>
+                <li className={`dropdown ${menu.about && "current"}`}>
+                  <Link to="/">Promotions</Link>
+                </li>
+                <li className={`dropdown ${menu.about && "current"}`}>
+                  <Link to="/">Claims</Link>
+                </li>
+                <li className={`dropdown ${menu.about && "current"}`}>
+                  <Link to="/about">About</Link>
+                </li>
+
+                {/* <li className={`dropdown ${menu.about && "current"}`}>
                   {console.warn("Hello", isLoggedIn)}
 
-                  <Link to="/credit-card">Credit Card</Link>
+                  <Link to="/credit-card">Credit Card</Link> */}
 
-                  {/* {isLoggedIn ? (
+                {/* {isLoggedIn ? (
                     <Link to="/credit-card">Home</Link>
                   ) : (
                     <Link to="/">Home</Link>
                   )} */}
-                  {/* <ul>
+                {/* <ul>
                     <li>
                       <Link to="/home">Home One</Link>
                     </li>
@@ -186,16 +208,16 @@ const Navbar = () => {
                       </ul>
                     </li>
                   </ul> */}
-                </li>
-                <li className={`dropdown ${menu.home}`}>
-                  <Link to="#">Benefits</Link>
+                {/* </li> */}
+                {/* <li className={`dropdown ${menu.home}`}>
+                  <Link to="#">Benefits</Link> */}
 
-                  {/* {isLoggedIn ? (
+                {/* {isLoggedIn ? (
                     <Link to="/credit-card">Home</Link>
                   ) : (
                     <Link to="/">Home</Link>
                   )} */}
-                  {/* <ul>
+                {/* <ul>
                     <li>
                       <Link to="/home">Home One</Link>
                     </li>
@@ -214,19 +236,19 @@ const Navbar = () => {
                       </ul>
                     </li>
                   </ul> */}
-                </li>
-                <li className={`dropdown ${menu.news && "current"}`}>
+                {/* </li> */}
+                {/* <li className={`dropdown ${menu.news && "current"}`}>
                   <Link to="#">Pay</Link>
-                </li>
+                </li> */}
                 {/* <li className={`dropdown ${menu.service && "current"}`}>
                   <Link to="#">Offer</Link>
                 </li> */}
-                <li className={`dropdown ${menu.about && "current"}`}>
+                {/* <li className={`dropdown ${menu.about && "current"}`}>
                   <Link to="#">Rewards</Link>
                 </li>
                 <li className={`dropdown ${menu.news && "current"}`}>
                   <Link to="#">Saving</Link>
-                </li>
+                </li> */}
 
                 {/* <li className={`dropdown ${menu.about && "current"}`}>
                   <Link to="#">About</Link>
@@ -261,7 +283,7 @@ const Navbar = () => {
                     </li>
                   </ul>
                 </li> */}
-                <li className={`dropdown ${menu.pages && "current"}`}>
+                {/* <li className={`dropdown ${menu.pages && "current"}`}>
                   <Link to="#">Apply</Link>
 
                   <ul>
@@ -278,7 +300,7 @@ const Navbar = () => {
                       <Link to="#">Home Loan</Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
                 {/* <li className="search-btn search-toggler">
                   <Link to="#" onClick={() => setsearch(true)}>
                     <i className="pylon-icon-magnifying-glass"></i>
@@ -296,6 +318,14 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
+              {/* {user?.firstName && location?.pathname !== "/login" ? (
+                <Link to="#">LoggedIn</Link>
+              ) : (
+                <>
+                  <Link to="/login">Login</Link>
+                  <i class="fa fa-sign-out" aria-hidden="true"></i>
+                </>
+              )} */}
               {/* code for logout button for rendering  
               {secureLocalStorage.getItem("user") ? (
                 <TbPower
@@ -310,17 +340,24 @@ const Navbar = () => {
                 </TbPower>
               ) : null} */}
               {user?.firstName && location?.pathname !== "/login" ? (
-                <TbPower
-                  size={"2.7rem"}
-                  className="Tbpower-icon"
-                  title="Logout"
-                  onClick={handleLogOut}
-                >
-                  <span className="Tbpower-icon-title">
-                    <title>Logout</title>
-                  </span>
-                </TbPower>
-              ) : null}
+                <div className="login-logout-button">
+                  <button
+                    className="btn btn-outline-danger logout-button"
+                    onClick={handleLogOut}
+                  >
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                <div className="login-logout-button">
+                  <Link
+                    to="/login"
+                    className="btn btn-outline-primary login-button"
+                  >
+                    Login
+                  </Link>
+                </div>
+              )}
             </div>
           </nav>
           {/* ) : (

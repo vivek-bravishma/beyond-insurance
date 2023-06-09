@@ -23,6 +23,9 @@ import secureLocalStorage from "react-secure-storage";
 import { Outlet } from "react-router-dom";
 import PrivateRoute from "./PrivateRoutes";
 import AuthRoute from "./AuthRoute";
+import Products from "../components/Products";
+import About from "../components/About";
+import DashBoard from "../components/DashBoard";
 
 const routes = [
   {
@@ -93,7 +96,6 @@ const routes = [
     path: "/Home3",
     element: (
       <>
-        {" "}
         <PrivateRoute component={<Home3 />} />
       </>
     ),
@@ -101,6 +103,22 @@ const routes = [
   {
     path: "/login",
     element: <AuthRoute component={<Login />} />,
+  },
+  {
+    path: "/products",
+    element: <Products />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <>
+        <PrivateRoute component={<DashBoard />} />
+      </>
+    ),
   },
   // Add more routes here...
 ];

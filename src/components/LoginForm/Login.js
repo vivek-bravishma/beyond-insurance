@@ -27,7 +27,7 @@ const Login = () => {
       localStorage.setItem("users", JSON.stringify(newObj));
       secureLocalStorage.setItem("user", JSON.stringify(user));
 
-      navigate("/Home3");
+      navigate("/dashboard");
       //window.location.reload();
     } else {
       alert("Invalid UserName or Password");

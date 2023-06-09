@@ -18,10 +18,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p style={{ fontSize: "13.5px" }}>
-                  Beyond Bank's commitment to providing exceptional service,
-                  innovative solutions, and responsible corporate practices has
-                  helped it establish a strong reputation as a trusted financial
-                  partner for customers around the world.
+                Beyond Insurance play a crucial role in providing individuals and businesses with financial protection and peace of mind. We\ help mitigate the financial impact of unexpected events and promote stability in various aspects of life, such as health, property, vehicles, business operations, and more.
                 </p>
                 <div className="footer-widget__about-phone">
                   <i className="pylon-icon-tech-support"></i>
@@ -39,19 +36,19 @@ const Footer = () => {
                 <h3 className="footer-widget__title">Explore</h3>
                 <ul className="list-unstyled footer-widget__link-list">
                   <li>
-                    <Link to="#">About</Link>
+                    <Link to="">About</Link>
                   </li>
                   <li>
-                    <Link to="#">Our Services</Link>
+                    <Link to="">Our Services</Link>
                   </li>
                   <li>
-                    <Link to="#">Latest News</Link>
+                    <Link to="">Latest News</Link>
                   </li>
                   <li>
-                    <Link to="#">Testimonials</Link>
+                    <Link to="">Testimonials</Link>
                   </li>
                   <li>
-                    <Link to="#">Contact</Link>
+                    <Link to="">Contact</Link>
                   </li>
                 </ul>
               </div>
@@ -68,7 +65,7 @@ const Footer = () => {
                     <div className="footer-widget__post-list-content">
                       <span>16 Oct, 2020</span>
                       <h3>
-                        <Link to="/newsdetails">
+                        <Link to="/">
                           We’re Providing the Quality Services
                         </Link>
                       </h3>
@@ -82,7 +79,7 @@ const Footer = () => {
                     <div className="footer-widget__post-list-content">
                       <span>16 Oct, 2020</span>
                       <h3>
-                        <Link to="/newsdetails">
+                        <Link to="/">
                           We’re Providing the Quality Services
                         </Link>
                       </h3>
@@ -96,18 +93,18 @@ const Footer = () => {
                 <h3>Contact</h3>
                 <ul className="list-unstyled footer-widget__contact-list">
                   <li>
-                    <Link to="#">
+                    <Link to="/">
                       <i className="pylon-icon-email1"></i>avayahelp@gmail.com
                     </Link>
                   </li>
                   <li>
-                    <Link to="#">
+                    <Link to="/">
                       <i className="pylon-icon-clock2"></i>Mon - Fir 9:00 AM -
                       5:00 PM
                     </Link>
                   </li>
                   <li>
-                    <Link to="#">
+                    <Link to="/">
                       <i className="pylon-icon-pin1"></i>80 Broklyn Golden
                       Street, New York. USA
                     </Link>
@@ -120,18 +117,18 @@ const Footer = () => {
       </footer>
       <div className="bottom-footer">
         <div className="container">
-          <p>© Copyright 2020 by Company.com</p>
+          <p>© Copyright 2020 by bravishma.com</p>
 
           <div className="bottom-footer__social">
-            <Link to="#" className="fab fa-facebook-square"></Link>
-            <Link to="#" className="fab fa-twitter"></Link>
-            <Link to="#" className="fab fa-pinterest-p"></Link>
-            <Link to="#" className="fab fa-instagram"></Link>
+            <Link to="" className="fab fa-facebook-square"></Link>
+            <Link to="" className="fab fa-twitter"></Link>
+            <Link to="" className="fab fa-pinterest-p"></Link>
+            <Link to="" className="fab fa-instagram"></Link>
           </div>
         </div>
       </div>
       {/* <Link
-        to="#"
+        to=""
         data-target="html"
         className="scroll-to-target scroll-to-top"
       >
